@@ -19,14 +19,23 @@ orçamentos, agendamentos e serviços realizados.
 - Cadastro de cliente
 - Listagem de clientes
 
-### Tecnologias utilizadas:
-- Java
-- Spring Boot
-- H2 Database
-- HTML
-- JavaScript (Fetch API)
-
 ### Funcionalidades entregues:
 - API REST funcional
 - Persistência em banco
 - Integração frontend-backend
+
+## Sprint 3
+
+### Histórias implementadas
+
+- Cadastro de serviços
+- Agendamento de serviços
+- Visualização da agenda por data
+
+### Funcionalidades entregues
+
+- Nova entidade Servico
+- Nova entidade Agendamento
+- Relacionamento Cliente ↔ Serviço
+- Filtro de agendamentos por data
+- Reorganização do frontend em múltiplas páginas
