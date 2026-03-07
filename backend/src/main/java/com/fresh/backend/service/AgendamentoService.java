@@ -1,10 +1,10 @@
 package com.fresh.backend.service;
 
-import org.springframework.stereotype.Service;
-import java.time.LocalDate;
-import java.util.List;
 import com.fresh.backend.model.Agendamento;
 import com.fresh.backend.repository.AgendamentoRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class AgendamentoService {
@@ -15,12 +15,36 @@ public class AgendamentoService {
         this.repository = repository;
     }
 
+    public List<Agendamento> listar() {
+        return repository.findAll();
+    }
+
     public Agendamento salvar(Agendamento agendamento) {
-        agendamento.setStatus("AGENDADO");
         return repository.save(agendamento);
     }
 
-    public List<Agendamento> listarPorData(LocalDate data) {
-        return repository.findByData(data);
+    public Agendamento gerarOrcamento(Long id, Double valor) {
+        Agendamento a = repository.findById(id).orElseThrow();
+        a.setValorTotal(valor);
+        a.setStatus("ORCAMENTO_GERADO");
+        return repository.save(a);
+    }
+
+    public Agendamento aprovarOrcamento(Long id) {
+        Agendamento a = repository.findById(id).orElseThrow();
+        a.setStatus("APROVADO");
+        return repository.save(a);
+    }
+
+    public Agendamento concluirServico(Long id) {
+        Agendamento a = repository.findById(id).orElseThrow();
+        a.setStatus("CONCLUIDO");
+        return repository.save(a);
+    }
+
+    public Agendamento cancelar(Long id) {
+        Agendamento a = repository.findById(id).orElseThrow();
+        a.setStatus("CANCELADO");
+        return repository.save(a);
     }
 }
