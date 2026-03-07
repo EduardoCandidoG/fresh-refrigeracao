@@ -1,23 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fresh - Serviços</title>
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh - Serviços</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container"><h2>Fresh</h2></div>
+        <a href="index.html">Painel</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="servicos.html" class="active">Serviços</a>
+        <a href="agendamentos.html">Agendar</a>
+        <a href="agenda.html">Agenda</a>
+    </nav>
 
-    <body>
-        <h2>Cadastrar Serviço</h2>
+    <main class="main-wrapper">
+        <div class="header-page">
+            <div class="icon-box">🔧</div>
+            <div>
+                <h1>Serviços</h1>
+                <p>Cadastre os serviços oferecidos</p>
+            </div>
+        </div>
 
-        <input id="nomeServico" placeholder="Nome"><br>
-        <input id="descricaoServico" placeholder="Descrição"><br>
-        <input id="precoServico" placeholder="Preço"><br>
-        <button onclick="cadastrarServico()">Cadastrar</button>
+        <div class="card">
+            <h3>Novo Serviço</h3>
+            <div style="display: grid; grid-template-columns: 2fr 2fr 1fr; gap: 16px;">
+                <div>
+                    <label>Nome do Serviço</label>
+                    <input id="nomeServico" placeholder="Ex: Manutenção Preventiva">
+                </div>
+                <div>
+                    <label>Descrição</label>
+                    <input id="descricaoServico" placeholder="O que está incluso?">
+                </div>
+                <div>
+                    <label>Preço (R$)</label>
+                    <input type="number" id="precoServico" placeholder="0,00">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="cadastrarServico()">+ Cadastrar</button>
+        </div>
 
-        <h2>Lista de Serviços</h2>
-        <ul id="listaServicos"></ul>
+        <h3>Lista de Serviços</h3>
+        <div id="listaServicos">
+            </div>
+    </main>
 
-        <a href="agendamentos.html">Ir para Agendamentos</a>
-        <a href="index.html">⬅ Voltar ao Menu Principal</a>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="/frontend/js/script.js"></script>
+</body>
 </html>

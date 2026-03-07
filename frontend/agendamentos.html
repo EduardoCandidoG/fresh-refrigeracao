@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fresh - Agendamentos</title>
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh - Agendar</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container"><h2>Fresh</h2></div>
+        <a href="index.html">Painel</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamentos.html" class="active">Agendar</a>
+        <a href="agenda.html">Agenda</a>
+    </nav>
 
-    <body>
-        <h2>Novo Agendamento</h2>
+    <main class="main-wrapper">
+        <div class="header-page">
+            <div class="icon-box">📅</div>
+            <div>
+                <h1>Novo Agendamento</h1>
+                <p>Selecione o cliente e o serviço para agendar</p>
+            </div>
+        </div>
 
-        <input id="clienteId" placeholder="ID do Cliente"><br>
-        <input id="servicoId" placeholder="ID do Serviço"><br>
-        <input type="date" id="dataAgendamento"><br>
-        <button onclick="agendarServico()">Agendar</button>
+        <div class="card" style="max-width: 600px;">
+            <div style="margin-bottom: 15px;">
+                <label>Cliente</label>
+                <select id="clienteId">
+                    <option value="">Selecione o cliente...</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label>Serviço</label>
+                <select id="servicoId">
+                    <option value="">Selecione o serviço...</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label>Data do Atendimento</label>
+                <input type="date" id="dataAgendamento">
+            </div>
 
-        <a href="agenda.html">Ver Agenda do Dia</a>
-        <a href="index.html">⬅ Voltar ao Menu Principal</a>
+            <button class="btn-primary" onclick="agendarServico()" style="width: 100%;">📅 Confirmar Agendamento</button>
+        </div>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="/frontend/js/script.js"></script>
+</body>
 </html>

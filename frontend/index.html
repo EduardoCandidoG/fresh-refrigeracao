@@ -1,20 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fresh - Sistema de Gestão</title>
-    </head>
-    <body>
-
-        <h1>Fresh - Gestão de Refrigeração</h1>
-
-        <h3>Menu Principal</h3>
-
-    <nav>
-        <a href="clientes.html">Clientes</a> |
-        <a href="servicos.html">Serviços</a> |
-        <a href="agendamentos.html">Agendamentos</a> |
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh - Painel</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container"><h2>Fresh</h2></div>
+        <a href="index.html" class="active">Painel</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamentos.html">Agendar</a>
         <a href="agenda.html">Agenda</a>
     </nav>
 
-    </body>
+    <main class="main-wrapper">
+        <div class="header-page">
+            <div class="icon-box">📊</div>
+            <div>
+                <h1>Painel</h1>
+                <p>Visão geral do seu negócio</p>
+            </div>
+        </div>
+
+        <div class="card" style="background: var(--primary); color: white;">
+            <h2>Bem-vindo ao Fresh ❄</h2>
+            <p>Gerencie seus clientes e serviços em um só lugar.</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card"><h3 id="countClientes">0</h3><p>Clientes</p></div>
+            <div class="stat-card"><h3 id="countServicos">0</h3><p>Serviços</p></div>
+            <div class="stat-card"><h3 id="countAgendamentos">0</h3><p>Agendamentos</p></div>
+            <div class="stat-card"><h3 id="countHoje">0</h3><p>Hoje</p></div>
+        </div>
+    </main>
+</body>
 </html>

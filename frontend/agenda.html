@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fresh - Agenda</title>
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh - Agenda</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container"><h2>Fresh</h2></div>
+        <a href="index.html">Painel</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamentos.html">Agendar</a>
+        <a href="agenda.html" class="active">Agenda</a>
+    </nav>
 
-    <body>
-        <h2>Visualizar Agenda</h2>
+    <main class="main-wrapper">
+        <div class="header-page">
+            <div class="icon-box">🗓</div>
+            <div>
+                <h1>Agenda de Serviços</h1>
+                <p>Visualize e controle os atendimentos</p>
+            </div>
+        </div>
 
-        <input type="date" id="dataBusca">
-        <button onclick="buscarAgenda()">Buscar</button>
+        <div class="card">
+            <div style="display: flex; gap: 15px; align-items: flex-end;">
+                <div style="flex: 1;">
+                    <label>Filtrar por Data</label>
+                    <input type="date" id="filtroData">
+                </div>
+                <button class="btn-primary" style="margin: 0; height: 45px;" onclick="listarAgenda()">Buscar</button>
+            </div>
+        </div>
 
-        <ul id="listaAgenda"></ul>
+        <div id="listaAgenda">
+            <p style="text-align: center; color: #94a3b8; margin-top: 20px;">Carregando agenda...</p>
+        </div>
+    </main>
 
-        <a href="index.html">⬅ Voltar ao Menu Principal</a>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="/frontend/js/script.js"></script>
+</body>
 </html>

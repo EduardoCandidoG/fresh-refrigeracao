@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fresh - Clientes</title>
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh - Clientes</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-container"><h2>Fresh</h2></div>
+        <a href="index.html">Painel</a>
+        <a href="clientes.html" class="active">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamentos.html">Agendar</a>
+        <a href="agenda.html">Agenda</a>
+    </nav>
 
-    <body>
-        <h2>Cadastrar Cliente</h2>
+    <main class="main-wrapper">
+        <div class="header-page">
+            <div class="icon-box">👥</div>
+            <div>
+                <h1>Clientes</h1>
+                <p>Cadastre e gerencie seus clientes</p>
+            </div>
+        </div>
 
-        <input id="nome" placeholder="Nome"><br>
-        <input id="telefone" placeholder="Telefone"><br>
-        <input id="email" placeholder="Email"><br>
-        <input id="endereco" placeholder="Endereço"><br>
-        <button onclick="cadastrarCliente()">Cadastrar</button>
+        <div class="card">
+            <h3>Novo Cliente</h3>
+            <div class="grid-2">
+                <div>
+                    <label>Nome</label>
+                    <input id="nome" placeholder="Ex: João Silva">
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input id="telefone" placeholder="(34) 99999-0000">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input id="email" placeholder="email@exemplo.com">
+                </div>
+                <div>
+                    <label>Endereço</label>
+                    <input id="endereco" placeholder="Rua, Número, Bairro">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="cadastrarCliente()">+ Cadastrar</button>
+        </div>
 
-        <h2>Lista de Clientes</h2>
-        <ul id="listaClientes"></ul>
+        <h3>Lista de Clientes</h3>
+        <div id="listaClientes">
+            </div>
+    </main>
 
-        <a href="servicos.html">Ir para Serviços</a>
-        <a href="index.html">⬅ Voltar ao Menu Principal</a>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="/frontend/js/script.js"></script>
+</body>
 </html>
