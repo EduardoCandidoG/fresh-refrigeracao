@@ -18,21 +18,55 @@ public class Agendamento {
 
     private LocalDate data;
 
+    private Double valorTotal;
+
     private String status;
 
-    public Agendamento() {}
+    public Agendamento() {
+        this.status = "PENDENTE";
+    }
 
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-    public Cliente getCliente() { return cliente; }
-    public void setCliente(Cliente cliente) { this.cliente = cliente; }
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-    public Servico getServico() { return servico; }
-    public void setServico(Servico servico) { this.servico = servico; }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-    public LocalDate getData() { return data; }
-    public void setData(LocalDate data) { this.data = data; }
+    public Servico getServico() {
+        return servico;
+    }
 
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public void setServico(Servico servico) {
+        this.servico = servico;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    public Double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
